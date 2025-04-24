@@ -1,0 +1,147 @@
+# ==================================
+# 通用规则 / General Rules
+# ==================================
+
+# 忽略所有日志文件 / Ignore all log files
+*.log
+
+# 忽略操作系统生成的文件 / Ignore OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# 忽略崩溃转储文件 / Ignore crash dump files
+*.dmp
+core.*
+
+# ==================================
+# CMake 和构建系统 / CMake and Build System
+# ==================================
+
+# CMake 用户配置文件 / CMake user configuration files
+CMakeUserPresets.json
+
+# CLion 和其他 JetBrains IDE 的构建目录 (例如 cmake-build-debug, cmake-build-release)
+# Build directories for CLion and other JetBrains IDEs (e.g., cmake-build-debug, cmake-build-release)
+cmake-build-*/
+
+# 通用构建目录 / Common build directories
+[Bb]uild/
+_build/
+build*/
+Build/
+
+# CMake 生成的文件（通常在构建目录中，但最好明确忽略）
+# CMake generated files (usually in build directory, but good to ignore explicitly)
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+compile_commands.json
+
+# Makefiles (如果不在源码控制中) / Makefiles (if not under source control)
+Makefile
+*.make
+
+# Ninja 构建文件 / Ninja build files
+.ninja_log
+.ninja_deps
+build.ninja
+
+# ==================================
+# 编译产物 / Compiled Artifacts
+# ==================================
+
+# 对象文件 / Object files
+*.o
+*.obj
+*.lo
+
+# 预编译头文件 / Precompiled header files
+*.pch
+
+# 静态库 / Static libraries
+*.a
+*.lib
+*.lai
+
+# 动态库 / Shared libraries / DLLs
+*.so
+*.dylib
+*.dll
+*.bundle
+
+# 可执行文件 / Executables
+*.exe
+*.out
+*.app
+
+# ==================================
+# IDE 和编辑器配置 / IDE and Editor Configuration
+# ==================================
+
+# JetBrains IDE (CLion, IntelliJ, etc.)
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.vcxproj.user
+*.sln.dotsettings
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+
+# Netbeans
+nbproject/
+
+# ==================================
+# 测试和覆盖率 / Testing and Coverage
+# ==================================
+
+# CTest 输出目录 / CTest output directory
+Testing/
+
+# Gcov / Lcov 覆盖率数据 / Gcov / Lcov coverage data
+*.gcno
+*.gcda
+*.gcov
+*.lcov
+coverage/
+*.coverage
+
+# ==================================
+# 依赖管理 / Dependency Management
+# ==================================
+
+# Conan
+.conan/
+conanbuildinfo.cmake
+conaninfo.txt
+graph_info.json
+
+# Vcpkg
+vcpkg/
+vcpkg_installed/
+
+# 其他可能的依赖目录 / Other potential dependency directories
+vendor/
+third-party/
+dependencies/
+deps/
+
+# ==================================
+# 特定工具 / Specific Tools
+# ==================================
+
+# Doxygen 文档生成 / Doxygen documentation generation
+Doxyfile.bak
+docs/html/
+docs/latex/
